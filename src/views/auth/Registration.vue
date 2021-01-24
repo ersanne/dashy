@@ -1,10 +1,10 @@
 <template>
-<h1>This will be a calendar</h1>
+<h1>TODO</h1>
 </template>
 
 <script>
 export default {
-name: "Calender"
+  name: "Registration"
 }
 </script>
 

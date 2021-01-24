@@ -1,35 +1,40 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
-import Login from "@/views/Login";
+import Login from "@/views/auth/Login";
+import Dashboard from "@/views/Dashboard";
+import TodoList from "@/views/TodoList";
+import Notes from "@/views/Notes";
+import Contacts from "@/views/Contacts";
+import Calendar from "@/views/Calendar";
+import Registration from "@/views/auth/Registration";
 
 Vue.use(VueRouter)
 
 const routes = [
     {
         path: '/',
-        name: 'Home',
-        component: Home
+        name: 'Dashboard',
+        component: Dashboard
     },
     {
         path: '/todo',
         name: 'Todo',
-        component: Home
+        component: TodoList
     },
     {
         path: '/notes',
         name: 'Notes',
-        component: Home
+        component: Notes
     },
     {
         path: '/contacts',
         name: 'Contacts',
-        component: Home
+        component: Contacts
     },
     {
-        path: '/documents',
-        name: 'Documents',
-        component: Home
+        path: '/calendar',
+        name: 'Calendar',
+        component: Calendar
     },
     {
         path: '/about',
@@ -43,6 +48,11 @@ const routes = [
         path: '/login',
         name: 'Login',
         component: Login
+    },
+    {
+        path: '/registration',
+        name: 'Registration',
+        component: Registration
     },
 ]
 
