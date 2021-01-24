@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <NavBar></NavBar>
+    <NavBar v-if="showNav"></NavBar>
     <v-main>
       <router-view></router-view>
     </v-main>
@@ -16,9 +16,13 @@ export default {
   components: {
     NavBar,
   },
-
   data: () => ({
     //
   }),
+  computed: {
+    showNav: function () {
+      return this.$route.name !== 'Login' && this.$route.name !== 'Registration';
+    }
+  },
 };
 </script>
